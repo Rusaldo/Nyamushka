@@ -71,8 +71,7 @@
   font-weight: 700;
   color: $primary;
   cursor: pointer;
-  text-decoration: underline;
-  text-decoration-style: dashed;
+  border-bottom: 1px dashed currentColor;
   &:hover, &:focus {
     color: $secondary;
   }
