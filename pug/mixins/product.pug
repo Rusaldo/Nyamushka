@@ -1,0 +1,25 @@
+mixin product(productData)
+  li.products__item.product
+    article(class=productData.available ? "product__card" : "product__card product__card_disabled")
+      .product__inner
+        h4.product__slogan Сказочное заморское яство
+        h4.product__slogan_selected Котэ не одобряет?
+        h2.product__name Нямушка
+        h3.product__filling= productData.filling
+        ul.product__info
+          each item in productData.info
+            li.product__info-item
+              strong= item.value
+              span= " " + item.text                 
+        .product__weight
+          strong.product__weight-value= productData.weight
+          |  кг
+    footer.product__footer              
+      if productData.available
+        p.product__buy
+          | Чего сидишь? Порадуй котэ, 
+          a.product__link купи
+          | .
+        p.product__descr= productData.descr
+      else 
+        p.product__out-of-stock Печалька, #{productData.filling} закончился.

@@ -1,0 +1,32 @@
+.products {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000 url(../img/products-bg.png) no-repeat center / cover;
+  padding: 20px;
+}
+.products__heading {
+  font-family: $font-secondary;
+  font-size: 3.6rem;
+  font-weight: 100;
+  color: $text-secondary;
+  text-shadow: 0 1px 0 #000000;
+  text-align: center;
+}
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.products__item {
+  margin: 23px 40px;
+}
+
+//----------- MEDIA QUERIES -------------
+@media screen and (max-width: $tablet) {
+  .products__item {
+    margin: 23px 10px;
+  }
+}

@@ -1,0 +1,28 @@
+//----------- PRODUCT DATA ----------
+- var productOne = {available: true, filling: "с фуа-гра", weight: "0,5", info: [{value: "10", text: "порций"}, {text: "мышь в подарок"}], descr: "Печень утки разварная с артишоками.."};
+- var productTwo = {available: true, filling: "с рыбой", weight: "2", info: [{value: "40", text: "порций"}, {value: "2", text: "мыши в подарок"}], descr: "Головы щучьи с чесноком да свежайшая сёмгушка."};
+- var productThree = {available: false, filling: "с курой", weight: "5", info: [{value: "100", text: "порций"}, {value: "5", text: "мышей в подарок"}, {text: "заказчик доволен"}], descr: "Филе из цыплят с трюфелями в бульоне."};
+//------------- INCLUDES ------------
+include mixins/product
+//-----------------------------------
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Кошачий корм')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Нямушка
+    link(rel='stylesheet', href='css/style.min.css')
+  body
+    main
+      section.products
+        h1.products__heading Ты сегодня покормил кота?           
+        //--------- PRODUCT MIXIN USE ----------    
+        ul.products__list
+          +product(productOne)
+          +product(productTwo)
+          +product(productThree)
+    //--------- JavaScript -----------
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    script(src='js/app.js')
