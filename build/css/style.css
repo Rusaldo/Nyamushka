@@ -129,7 +129,6 @@ input[type=date], input[type=datetime], input[type=datetime-local], input[type=e
 
 /*------------- COLORS ------------*/
 /*------------ FONTS -------------*/
-/*--------- TRANSITIONS ----------*/
 /*----------- DEVICES ------------*/
 * {
   -webkit-box-sizing: border-box;
@@ -150,7 +149,7 @@ body {
   margin: 0;
   font-family: "Trebuchet MS", sans-serif;
   font-size: 1.4rem;
-  background-color: #000;
+  background: #000 url(../img/products-bg.png) no-repeat center center/cover fixed;
   color: #666666; }
 
 img,
@@ -175,11 +174,9 @@ a {
   color: inherit; }
 
 main {
-  height: 100%; }
-
-@media screen and (max-width: 576px) {
-  html {
-    min-height: 100%; } }
+  width: 100%;
+  height: 100%;
+  display: table; }
 
 /*------------ BLOCKS -------------*/
 .product__card {
@@ -263,9 +260,7 @@ main {
   font-weight: 700;
   color: #1698d9;
   cursor: pointer;
-  text-decoration: underline;
-  -webkit-text-decoration-style: dashed;
-          text-decoration-style: dashed; }
+  border-bottom: 1px dashed currentColor; }
   .product__link:hover, .product__link:focus {
     color: #d91667; }
 
@@ -329,26 +324,15 @@ main {
     margin: 23px 10px;
     width: 300px; }
   .product__inner {
-    width: 292px; } }
+    width: 292px; }
+  .product__slogan {
+    font-size: 1.5rem; } }
 
 /*----------- SECTIONS ------------*/
 .products {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #000 url(../img/products-bg.png) no-repeat center/cover;
-  padding: 20px; }
+  padding: 40px 20px;
+  display: table-cell;
+  vertical-align: middle; }
 
 .products__heading {
   font-family: "Exo2", serif;
